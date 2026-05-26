@@ -6,12 +6,12 @@ import { faqItems } from '../../lib/content';
 
 export default function FAQsPage() {
   return (
-    <main className="min-h-screen bg-brand-950 text-slate-100">
+    <main className="min-h-screen bg-paper text-foreground">
       <Header />
       <section className="section-bg py-20 sm:py-24">
         <div className="container space-y-8">
           <SectionHeading eyebrow="FAQs" title="Common questions about our programs and support." description="If you do not see your question here, please contact us and we will respond with clarity and care." />
-          <p className="max-w-3xl text-sm leading-7 text-slate-300">These answers are written to help you understand how we work and what to expect.</p>
+          <p className="max-w-3xl text-sm leading-7 text-muted">These answers are written to help you understand how we work and what to expect.</p>
         </div>
       </section>
 
@@ -23,4 +23,5 @@ export default function FAQsPage() {
     </main>
   );
 }
+
 

@@ -1,23 +1,13 @@
 import type { Metadata } from 'next';
-import { Inter, Playfair_Display } from 'next/font/google';
+import { Kalam, Patrick_Hand } from 'next/font/google';
 import './globals.css';
 
-const inter = Inter({
-  subsets: ['latin'],
-  variable: '--font-sans',
-  display: 'swap'
-});
-
-const playfair = Playfair_Display({
-  subsets: ['latin'],
-  weight: ['600', '700', '800'],
-  variable: '--font-serif',
-  display: 'swap'
-});
+const kalam = Kalam({ subsets: ['latin'], weight: ['400', '700'], variable: '--font-body', display: 'swap' });
+const patrick = Patrick_Hand({ subsets: ['latin'], weight: '400', variable: '--font-heading', display: 'swap' });
 
 export const metadata: Metadata = {
-  title: 'KNOW & GROW | Rooted in Knowledge, Committed to Society',
-  description: 'A youth-led awareness initiative focused on mental health, digital safety, education, and community support.',
+  title: 'KNOW & GROW',
+  description: 'Rooted in knowledge, committed to society.',
   openGraph: {
     title: 'KNOW & GROW',
     description: 'Engaging young communities with compassionate education, trusted support, and premium social impact.',
@@ -28,7 +18,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${playfair.variable} bg-white text-slate-100`}>{children}</body>
+      <body className={`${kalam.variable} ${patrick.variable} font-body bg-paper text-foreground`}>{children}</body>
     </html>
   );
 }
+
