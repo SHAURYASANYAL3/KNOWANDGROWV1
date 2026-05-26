@@ -45,10 +45,7 @@ img {
   margin: 0 auto;
 }
 
-.section-bg, .page-hero {
-  background-image: radial-gradient(circle at top left, rgba(166, 210, 182, 0.14), transparent 34%),
-    radial-gradient(circle at right, rgba(185, 147, 92, 0.14), transparent 28%);
-}
+/* removed background gradients */
 
 .fade-in {
   opacity: 0;
