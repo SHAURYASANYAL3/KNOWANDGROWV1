@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { AnimatePresence, motion } from 'framer-motion';
+// framer-motion removed for simpler static header
 import { ChevronDown, Menu, X } from 'lucide-react';
 
 const pages = [

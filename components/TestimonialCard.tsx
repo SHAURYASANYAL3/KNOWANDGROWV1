@@ -7,7 +7,7 @@ interface TestimonialCardProps {
 
 export default function TestimonialCard({ name, role, quote, accent }: TestimonialCardProps) {
   return (
-    <article className="group rounded-[2rem] border border-white/10 bg-slate-900/80 p-8 shadow-soft transition duration-300 hover:-translate-y-1 hover:border-gold/40 hover:bg-slate-900/95">
+    <article className="rounded-[2rem] border border-gray-200 bg-white p-8 shadow-sm">
       <div className={`mb-5 h-2 w-16 rounded-full bg-gradient-to-r ${accent}`} />
       <p className="text-lg leading-8 text-slate-200">“{quote}”</p>
       <div className="mt-8 border-t border-white/10 pt-5">
