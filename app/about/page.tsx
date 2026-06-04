@@ -1,6 +1,8 @@
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import SectionHeading from '../../components/SectionHeading';
+import MemberCard from '../../components/MemberCard';
+import { members } from '../../lib/content';
 
 export default function AboutPage() {
   return (
@@ -59,6 +61,21 @@ export default function AboutPage() {
               <p className="mt-4 text-sm leading-7 text-muted">{item.text}</p>
             </div>
           ))}
+        </div>
+      </section>
+
+      <section className="bg-paper py-16 lg:py-24 border-t border-border/10">
+        <div className="container">
+          <SectionHeading 
+            eyebrow="Our Team" 
+            title="The people behind KNOW & GROW." 
+            description="We are a diverse group of young individuals committed to making a difference." 
+          />
+          <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+            {members.map((member, index) => (
+              <MemberCard key={index} {...member} />
+            ))}
+          </div>
         </div>
       </section>
 
