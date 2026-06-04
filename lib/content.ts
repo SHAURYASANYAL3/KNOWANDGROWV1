@@ -230,10 +230,10 @@ export const members = [
     description: 'I am part of this initiative focused on educating children, that includes showing them how bad the social media culture is.',
     image: '/pic/member_pics/11.jpg'
   },
-  ...Array.from({ length: 4 }).map((_, i) => ({
-    name: `Team Member ${i + 12}`,
-    role: 'Volunteer',
+  {
+    name: 'Member 12',
+    role: 'Social Services Member',
     description: 'Dedicated to spreading awareness and supporting our community through youth-led initiatives and empathetic education.',
-    image: ''
-  }))
+    image: '/pic/member_pics/12.jpg'
+  }
 ];
