@@ -113,6 +113,51 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* SURVEY PARTICIPATION SECTION */}
+      <section className="py-20 bg-paper border-b-2 border-dashed border-ink/10 overflow-hidden relative">
+        {/* Decorative doodles */}
+        <div className="absolute top-10 right-[-5%] w-64 h-64 border-2 border-ink/5 rounded-full animate-wobble-slow -z-0" />
+        <div className="absolute bottom-10 left-[-5%] w-48 h-48 border border-ink/5 rounded-wobbly-2 -z-0" />
+        
+        <div className="container relative z-10">
+          <ScrollReveal direction="up" className="max-w-4xl mx-auto">
+            <WobblyCard variant="default" className="bg-white/80 backdrop-blur-sm p-10 md:p-16 text-center border-drawn shadow-paper">
+              <Tape className="top-[-20px] left-1/2 -translate-x-1/2 w-32 h-10" />
+              
+              <div className="space-y-6">
+                <h2 className="text-5xl md:text-6xl font-heading text-ink">KNOW & GROW</h2>
+                <p className="text-2xl md:text-3xl font-accent text-ink-navy rotate-[-1deg]">
+                  Bio Physical Education Awareness, Mental Health Awareness & Social Media Awareness
+                </p>
+                
+                <div className="h-px w-24 bg-ink/20 mx-auto my-8 border-dashed border-t-2" />
+                
+                <p className="text-xl md:text-2xl font-body text-ink/80 leading-relaxed max-w-3xl mx-auto">
+                  A survey conducted exclusively for school children to understand awareness levels regarding mental health, social media usage, relationships, school environment, physical education, and overall well-being.
+                </p>
+                
+                <div className="pt-8 space-y-6">
+                  <Button 
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSfhtBWxFhzXxjqJTaN3TkpQfMzGC9uje1axFxLVLGAd5fRuLQ/viewform?pli=1" 
+                    variant="primary" 
+                    size="lg"
+                    className="scale-110 md:scale-125"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Take the Survey
+                  </Button>
+                  
+                  <p className="text-lg font-accent text-ink-faded italic">
+                    "Your responses help improve awareness programs for students."
+                  </p>
+                </div>
+              </div>
+            </WobblyCard>
+          </ScrollReveal>
+        </div>
+      </section>
+
       {/* 3. IMPACT STATS - Sticky note grid */}
       <section className="bg-lined-paper py-20 sm:py-24 lg:py-32">
         <div className="container space-y-16">
