@@ -182,8 +182,14 @@ export const members = [
     description: "I'm a member of social services, passionate to educate young minds and secure better futures in the society for all, I believe everyone will grow up to be better citizens if taught young.",
     image: '/pic/member_pics/3.jpg'
   },
-  ...Array.from({ length: 12 }).map((_, i) => ({
-    name: `Team Member ${i + 4}`,
+  ...[4, 5, 6, 7, 8, 9, 10, 11].map((i) => ({
+    name: `Member ${i}`,
+    role: 'Social Services Member',
+    description: 'Dedicated to spreading awareness and supporting our community through youth-led initiatives and empathetic education.',
+    image: `/pic/member_pics/${i}.jpg`
+  })),
+  ...Array.from({ length: 4 }).map((_, i) => ({
+    name: `Team Member ${i + 12}`,
     role: 'Volunteer',
     description: 'Dedicated to spreading awareness and supporting our community through youth-led initiatives and empathetic education.',
     image: ''
