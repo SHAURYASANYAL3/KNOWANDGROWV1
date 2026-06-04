@@ -173,21 +173,63 @@ export const members = [
   {
     name: 'Member 2',
     role: 'Social Services Member',
-    description: 'I’m part of a youth-driven social service initiative that help children stay informed and help parents build healthier families.',
+    description: 'I’m part of a youth-driven social service initiative that helps children stay informed and helps parents build healthier families.',
     image: '/pic/member_pics/2.jpg'
   },
   {
     name: 'Member 3',
     role: 'Social Services Member',
-    description: "I'm a member of social services, passionate to educate young minds and secure better futures in the society for all, I believe everyone will grow up to be better citizens if taught young.",
+    description: 'I’m a member of social services, passionate to educate young minds and secure better futures in the society for all. I believe everyone will grow up to be better citizens if taught young.',
     image: '/pic/member_pics/3.jpg'
   },
-  ...[4, 5, 6, 7, 8, 9, 10, 11].map((i) => ({
-    name: `Member ${i}`,
+  {
+    name: 'Member 4',
     role: 'Social Services Member',
-    description: 'Dedicated to spreading awareness and supporting our community through youth-led initiatives and empathetic education.',
-    image: `/pic/member_pics/${i}.jpg`
-  })),
+    description: 'As a member of a youth-led social service initiative, I contribute to programs that create awareness among children and encourage parents to adopt positive practices that support their children’s growth, development, and well-being. Through these efforts, I aim to help build informed, responsible, and empowered future generations.',
+    image: '/pic/member_pics/4.jpg'
+  },
+  {
+    name: 'Member 5',
+    role: 'Social Services Member',
+    description: 'I’m part of a social service initiative focused on empowering & guiding children and creating a healthier future for society.',
+    image: '/pic/member_pics/5.jpg'
+  },
+  {
+    name: 'Rami Reddy',
+    role: 'Social Services Member',
+    description: "I am Rami Reddy and I'm part of this initiative, willing to work for the society and the future of it",
+    image: '/pic/member_pics/6.jpg'
+  },
+  {
+    name: 'Member 7',
+    role: 'Social Services Member',
+    description: 'I’m a member of this initiative, passionate about shaping future society.',
+    image: '/pic/member_pics/7.jpg'
+  },
+  {
+    name: 'Member 8',
+    role: 'Social Services Member',
+    description: "I'm worried about how mental health affects the physical well being of children, as a student myself I aim to create mental clarity for better future both for the child and the society",
+    image: '/pic/member_pics/8.jpg'
+  },
+  {
+    name: 'Member 9',
+    role: 'Social Services Member',
+    description: 'I’ve always been worried about how lack of sex education causes children to discriminate, literacy is the key to today and tomorrow.',
+    image: '/pic/member_pics/9.jpg'
+  },
+  {
+    name: 'Member 10',
+    role: 'Social Services Member',
+    description: 'I am part of this initiative aiming to create a healthier environment and reducing the gap between parents and children.',
+    image: '/pic/member_pics/10.jpg'
+  },
+  {
+    name: 'Member 11',
+    role: 'Social Services Member',
+    description: 'I am part of this initiative focused on educating children, that includes showing them how bad the social media culture is.',
+    image: '/pic/member_pics/11.jpg'
+  },
   ...Array.from({ length: 4 }).map((_, i) => ({
     name: `Team Member ${i + 12}`,
     role: 'Volunteer',
