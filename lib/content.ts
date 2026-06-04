@@ -162,3 +162,30 @@ export const trustSignals = [
   'Privacy-first approach',
   'Evidence-based curriculum'
 ];
+
+export const members = [
+  {
+    name: 'Member 1',
+    role: 'Social Services Member',
+    description: 'I am a member of Social Services, a group working for social awareness and positive change. We spread awareness about sex education and mental health to help build a better informed society. I am passionate about educating and supporting people in our society.',
+    image: '/pic/member_pics/1.jpg'
+  },
+  {
+    name: 'Member 2',
+    role: 'Social Services Member',
+    description: 'I’m part of a youth-driven social service initiative that help children stay informed and help parents build healthier families.',
+    image: '/pic/member_pics/2.jpg'
+  },
+  {
+    name: 'Member 3',
+    role: 'Social Services Member',
+    description: "I'm a member of social services, passionate to educate young minds and secure better futures in the society for all, I believe everyone will grow up to be better citizens if taught young.",
+    image: '/pic/member_pics/3.jpg'
+  },
+  ...Array.from({ length: 12 }).map((_, i) => ({
+    name: `Team Member ${i + 4}`,
+    role: 'Volunteer',
+    description: 'Dedicated to spreading awareness and supporting our community through youth-led initiatives and empathetic education.',
+    image: ''
+  }))
+];
