@@ -183,13 +183,13 @@ export const members = [
     image: '/pic/member_pics/11.jpg'
   },
   {
-    name: 'Member 2',
+    name: 'Sahasra Varma',
     role: 'Know & Grow Member',
     description: 'I’m part of a youth-driven social service initiative that helps children stay informed and helps parents build healthier families.',
     image: '/pic/member_pics/2.jpg'
   },
   {
-    name: 'Member 5',
+    name: 'Imtiyaaz raees',
     role: 'Know & Grow Member',
     description: 'I’m part of a social service initiative focused on empowering & guiding children and creating a healthier future for society.',
     image: '/pic/member_pics/5.jpg'
@@ -201,7 +201,7 @@ export const members = [
     image: '/pic/member_pics/6.jpg'
   },
   {
-    name: 'Member 1',
+    name: 'Apsana jaban',
     role: 'Know & Grow Member',
     description: 'I am a member of Social Services, a group working for social awareness and positive change. We spread awareness about sex education and mental health to help build a better informed society. I am passionate about educating and supporting people in our society.',
     image: '/pic/member_pics/1.jpg'
@@ -231,7 +231,7 @@ export const members = [
     image: '/pic/member_pics/4.jpg'
   },
   {
-    name: 'Member 12',
+    name: 'Manogya reddy',
     role: 'Know & Grow Member',
     description: 'Dedicated to spreading awareness and supporting our community through youth-led initiatives and empathetic education.',
     image: '/pic/member_pics/12.jpg'
