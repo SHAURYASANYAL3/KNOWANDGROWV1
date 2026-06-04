@@ -1,50 +1,86 @@
-import type { Config } from 'tailwindcss';
+import type { Config } from "tailwindcss";
 
 const config: Config = {
-  content: ['./app/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
-  darkMode: 'class',
+  content: [
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
   theme: {
     extend: {
       colors: {
-        paper: '#fdf7ed',
-        paperHighlight: '#fff2d6',
-        foreground: '#2d2b27',
-        muted: '#6f6b62',
-        border: '#2c2923',
-        accent: '#d44f3d',
-        accent2: '#c2914a',
-        gold: '#c2914a',
-        mint: '#80b39f',
-        mist: '#e7f2ee',
-        brand: {
-          950: '#061025',
-          900: '#0D1A3B',
-          800: '#172A55',
-          700: '#243A6B',
-          600: '#345185'
+        // Paper background colors
+        paper: {
+          DEFAULT: "var(--paper)",       // Warm off-white
+          lined: "var(--paper-lined)",   // For ruled lines
+          graph: "var(--paper-graph)",   // For graph dots
+        },
+        // Ink & Text colors
+        ink: {
+          DEFAULT: "var(--ink-charcoal)", // Soft black/dark gray pencil
+          navy: "var(--ink-navy)",        // Blue ballpoint pen
+          red: "var(--ink-red)",          // Red grading pen
+          faded: "var(--ink-faded)",      // Faded pencil
+        },
+        // Highlighter & Accents
+        marker: {
+          yellow: "var(--marker-yellow)",
+          pink: "var(--marker-pink)",
+          green: "var(--marker-green)",
+          blue: "var(--marker-blue)",
+        },
+        // Sticky Notes
+        sticky: {
+          yellow: "var(--sticky-yellow)",
+          pink: "var(--sticky-pink)",
+          blue: "var(--sticky-blue)",
+          green: "var(--sticky-green)",
         }
       },
-      boxShadow: {
-        paper: '6px 6px 0 rgba(45, 40, 34, 0.16)',
-        paperStrong: '10px 10px 0 rgba(45, 40, 34, 0.2)',
-        soft: '0 24px 48px rgba(45, 40, 34, 0.12)'
+      fontFamily: {
+        heading: ["var(--font-heading)", "cursive"],
+        body: ["var(--font-body)", "cursive"],
+        accent: ["var(--font-accent)", "cursive"],
       },
       borderRadius: {
-        wobbly: '255px 15px 225px 15px / 15px 225px 15px 255px',
-        wobblyMd: '24px 66px 22px 70px / 70px 22px 66px 24px'
+        'wobbly-1': '255px 15px 225px 15px/15px 225px 15px 255px',
+        'wobbly-2': '15px 225px 15px 255px/255px 15px 225px 15px',
+        'wobbly-3': '225px 15px 255px 15px/15px 255px 15px 225px',
+        'wobbly-4': '15px 255px 15px 225px/225px 15px 255px 15px',
+      },
+      boxShadow: {
+        'sketch': '4px 4px 0px 0px var(--ink-faded)',
+        'sketch-hover': '6px 6px 0px 0px var(--ink-charcoal)',
+        'sticky': '2px 4px 10px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.05)',
+      },
+      animation: {
+        'draw-line': 'drawLine 1s ease-out forwards',
+        'wobble-slow': 'wobble 4s ease-in-out infinite',
+        'float-paper': 'floatPaper 6s ease-in-out infinite',
+      },
+      keyframes: {
+        drawLine: {
+          '0%': { strokeDashoffset: '1000' },
+          '100%': { strokeDashoffset: '0' },
+        },
+        wobble: {
+          '0%, 100%': { transform: 'rotate(-1deg)' },
+          '50%': { transform: 'rotate(1deg)' },
+        },
+        floatPaper: {
+          '0%, 100%': { transform: 'translateY(0) rotate(-1deg)' },
+          '50%': { transform: 'translateY(-10px) rotate(1deg)' },
+        }
       },
       backgroundImage: {
-        'hero-glow': 'radial-gradient(circle at top, rgba(212, 79, 61, 0.18), transparent 34%), radial-gradient(circle at 80% 18%, rgba(194, 145, 74, 0.16), transparent 28%)'
+        'lined-paper': 'repeating-linear-gradient(transparent, transparent 31px, var(--paper-lined) 31px, var(--paper-lined) 32px)',
+        'graph-paper': 'radial-gradient(var(--paper-graph) 1px, transparent 1px)',
       },
-      fontFamily: {
-        heading: ['var(--font-heading)', 'Patrick Hand', 'cursive'],
-        body: ['var(--font-body)', 'Kalam', 'cursive'],
-        serif: ['var(--font-heading)', 'Georgia', 'serif'],
-        sans: ['var(--font-body)', 'Inter', 'system-ui', 'sans-serif']
+      backgroundSize: {
+        'graph-paper': '20px 20px',
       }
-    }
+    },
   },
-  plugins: []
+  plugins: [],
 };
-
 export default config;

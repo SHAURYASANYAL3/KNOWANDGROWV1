@@ -1,13 +1,33 @@
 import type { HTMLAttributes, ReactNode } from 'react';
+import Tape from './Tape';
 
 type WobblyCardProps = HTMLAttributes<HTMLElement> & {
   as?: 'article' | 'div' | 'section';
+  variant?: 'default' | 'sticky-yellow' | 'sticky-pink' | 'sticky-blue' | 'sticky-green' | 'polaroid';
+  tape?: boolean;
   children: ReactNode;
 };
 
-export default function WobblyCard({ as: Component = 'article', className = '', children, ...props }: WobblyCardProps) {
+const variantClasses: Record<NonNullable<WobblyCardProps['variant']>, string> = {
+  default: 'bg-white p-6 border-drawn shadow-sketch',
+  'sticky-yellow': 'sticky-note sticky-yellow',
+  'sticky-pink': 'sticky-note sticky-pink',
+  'sticky-blue': 'sticky-note sticky-blue',
+  'sticky-green': 'sticky-note sticky-green',
+  polaroid: 'polaroid'
+};
+
+export default function WobblyCard({
+  as: Component = 'div',
+  variant = 'default',
+  tape = false,
+  className = '',
+  children,
+  ...props
+}: WobblyCardProps) {
   return (
-    <Component className={`paper-card rounded-wobbly border-border border bg-white/95 shadow-paper ${className}`.trim()} {...props}>
+    <Component className={`${variantClasses[variant]} ${className} relative`.trim()} {...props}>
+      {tape && <Tape />}
       {children}
     </Component>
   );

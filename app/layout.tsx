@@ -1,9 +1,27 @@
 import type { Metadata } from 'next';
-import { Kalam, Patrick_Hand } from 'next/font/google';
+import { Kalam, Patrick_Hand, Caveat } from 'next/font/google';
 import './globals.css';
 
-const kalam = Kalam({ subsets: ['latin'], weight: ['400', '700'], variable: '--font-body', display: 'swap' });
-const patrick = Patrick_Hand({ subsets: ['latin'], weight: '400', variable: '--font-heading', display: 'swap' });
+const kalam = Kalam({
+  subsets: ['latin'],
+  weight: ['300', '400', '700'],
+  variable: '--font-heading',
+  display: 'swap'
+});
+
+const patrickHand = Patrick_Hand({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-body',
+  display: 'swap'
+});
+
+const caveat = Caveat({
+  subsets: ['latin'],
+  weight: ['400', '500', '600', '700'],
+  variable: '--font-accent',
+  display: 'swap'
+});
 
 export const metadata: Metadata = {
   title: {
@@ -35,12 +53,6 @@ export const metadata: Metadata = {
     siteName: 'KNOW & GROW',
     type: 'website',
     locale: 'en_US'
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'KNOW & GROW | Youth Mental Health & Digital Safety Awareness',
-    description: 'A youth-led initiative focused on mental health awareness, digital safety, drug prevention, and community education.',
-    creator: '@knowandgrow'
   }
 };
 
@@ -50,8 +62,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <meta name="google-site-verification" content="ssbXNjdvojRNdr60tvqoCJKpFcJYFafwPHL9Zso_Yyw" />
       </head>
-      <body className={`${kalam.variable} ${patrick.variable} font-body bg-paper text-foreground`}>{children}</body>
+      <body className={`${kalam.variable} ${patrickHand.variable} ${caveat.variable} font-body bg-paper text-ink relative`}>
+        {/* Global ruled lines overlay - very subtle */}
+        <div className="pointer-events-none fixed inset-0 z-[-1] bg-lined-paper opacity-50" />
+        {children}
+      </body>
     </html>
   );
 }
-
