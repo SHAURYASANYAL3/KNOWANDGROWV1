@@ -58,17 +58,44 @@ export default function AboutPage() {
           highlightColor="yellow"
         />
         
-        <div className="mt-16 grid gap-8 md:grid-cols-3 relative">
-          <div className="hidden md:block absolute top-[20%] left-[10%] right-[10%] h-4 svg-draw pointer-events-none -z-10">
+        <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3 relative">
+          <div className="hidden lg:block absolute top-[20%] left-[10%] right-[10%] h-4 svg-draw pointer-events-none -z-10">
              <svg viewBox="0 0 100 20" preserveAspectRatio="none" className="w-full h-full">
                <path d="M0,10 Q50,0 100,10" fill="none" strokeWidth="2" strokeDasharray="5,5" className="stroke-ink/30" />
              </svg>
           </div>
           
           {[
-            { step: '01', title: 'Participant-first', text: 'Programs focus on respect, choice, and meaningful connection.', color: 'sticky-pink' },
-            { step: '02', title: 'Trusted facilitation', text: 'Our facilitators are trained to speak openly, without judgment.', color: 'sticky-yellow' },
-            { step: '03', title: 'Community', text: 'We work with schools, families, and local partners.', color: 'sticky-green' }
+            { 
+              step: '01', 
+              title: 'Sex Education ’n Relationship & Health Education', 
+              text: 'Providing comprehensive and compassionate guidance on bodily autonomy, consent, and healthy interpersonal connections. We aim to foster a culture of respect and understanding for long-term well-being.', 
+              color: 'sticky-pink' 
+            },
+            { 
+              step: '02', 
+              title: 'Mental Health ’n Mental Well-being', 
+              text: 'Creating safe spaces for emotional expression and offering practical tools to manage stress and anxiety. Our goal is to build resilience and prioritize psychological health in everyday life.', 
+              color: 'sticky-yellow' 
+            },
+            { 
+              step: '03', 
+              title: 'Social Media ’n Digital Awareness', 
+              text: 'Empowering youth to navigate the digital world with critical thinking and safe habits. We focus on building a healthy relationship with technology and protecting digital identities.', 
+              color: 'sticky-green' 
+            },
+            { 
+              step: '04', 
+              title: 'Drug Addiction ’n Substance Awareness', 
+              text: 'Delivering evidence-based education on the risks of substance use through open, non-judgmental dialogue. We support informed decision-making and community-wide prevention strategies.', 
+              color: 'sticky-pink' 
+            },
+            { 
+              step: '05', 
+              title: 'Awareness of Acts ’n Legal Awareness', 
+              text: 'Educating young people about their rights and the legal frameworks that protect them. We provide clarity on relevant laws to ensure they can navigate society safely and confidently.', 
+              color: 'sticky-yellow' 
+            }
           ].map((item, idx) => (
             <ScrollReveal key={item.title} direction="up" delay={idx + 1} className="relative z-10">
               <WobblyCard variant={item.color as any} tape className="h-full p-8 flex flex-col">

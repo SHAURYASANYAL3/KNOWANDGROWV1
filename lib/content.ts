@@ -11,45 +11,38 @@ interface FocusArea {
 
 export const focusAreas: FocusArea[] = [
   {
-    title: 'Mental Health Awareness',
-    description: 'Practical support, safe spaces, and emotional literacy for young people navigating pressure and change.',
-    icon: '🧠',
-    color: 'sage',
-    href: '/mental-health'
-  },
-  {
-    title: 'Digital Safety',
-    description: 'Clear guidance on online risks, healthy boundaries, and safe digital habits for modern youth.',
-    icon: '🛡️',
-    color: 'navy',
-    href: '/digital-safety'
-  },
-  {
-    title: 'Drug Abuse Prevention',
-    description: 'Evidence-based education and supportive conversations that help young people make safer choices.',
-    icon: '⚠️',
-    color: 'accent',
-    href: '/drug-awareness'
-  },
-  {
-    title: 'Sex Education Awareness',
-    description: 'Compassionate learning about consent, healthy relationships, and body confidence.',
+    title: 'Sex Education ’n Relationship & Health Education',
+    description: 'Providing comprehensive and compassionate guidance on bodily autonomy, consent, and healthy interpersonal connections.',
     icon: '💬',
     color: 'peach',
     href: '/focus-areas'
   },
   {
-    title: 'Youth Vulnerability Prevention',
-    description: 'Community-first strategies that spot risk early and nurture stronger social support systems.',
-    icon: '🤝',
-    color: 'gold',
-    href: '/focus-areas'
+    title: 'Mental Health ’n Mental Well-being',
+    description: 'Creating safe spaces for emotional expression and offering practical tools to manage stress and anxiety.',
+    icon: '🧠',
+    color: 'sage',
+    href: '/mental-health'
   },
   {
-    title: 'Community Education',
-    description: 'Workshops, partnerships, and campaigns that build knowledge and trust across neighborhoods.',
-    icon: '🌱',
-    color: 'sage',
+    title: 'Social Media ’n Digital Awareness',
+    description: 'Empowering youth to navigate the digital world with critical thinking and safe habits.',
+    icon: '🛡️',
+    color: 'navy',
+    href: '/digital-safety'
+  },
+  {
+    title: 'Drug Addiction ’n Substance Awareness',
+    description: 'Delivering evidence-based education on the risks of substance use through open, non-judgmental dialogue.',
+    icon: '⚠️',
+    color: 'accent',
+    href: '/drug-awareness'
+  },
+  {
+    title: 'Awareness of Acts ’n Legal Awareness',
+    description: 'Educating young people about their rights and the legal frameworks that protect them in society.',
+    icon: '📜',
+    color: 'gold',
     href: '/focus-areas'
   }
 ];
