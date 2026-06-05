@@ -183,7 +183,7 @@ export const members = [
     image: '/pic/member_pics/11.jpg'
   },
   {
-    name: 'Sahasra Varma',
+    name: 'Manogya reddy',
     role: 'Know & Grow Member',
     description: 'I’m part of a youth-driven social service initiative that helps children stay informed and helps parents build healthier families.',
     image: '/pic/member_pics/2.jpg'
@@ -207,7 +207,7 @@ export const members = [
     image: '/pic/member_pics/1.jpg'
   },
   {
-    name: 'Bhuvana',
+    name: 'D sahithi',
     role: 'Know & Grow Member',
     description: "I'm worried about how mental health affects the physical well being of children, as a student myself I aim to create mental clarity for better future both for the child and the society",
     image: '/pic/member_pics/8.jpg'
@@ -225,13 +225,13 @@ export const members = [
     image: '/pic/member_pics/10.jpg'
   },
   {
-    name: 'Member 4',
+    name: 'G.akshaya',
     role: 'Know & Grow Member',
     description: 'As a member of a youth-led social service initiative, I contribute to programs that create awareness among children and encourage parents to adopt positive practices that support their children’s growth, development, and well-being. Through these efforts, I aim to help build informed, responsible, and empowered future generations.',
     image: '/pic/member_pics/4.jpg'
   },
   {
-    name: 'Manogya reddy',
+    name: 'Sahasra Varma',
     role: 'Know & Grow Member',
     description: 'Dedicated to spreading awareness and supporting our community through youth-led initiatives and empathetic education.',
     image: '/pic/member_pics/12.jpg'
