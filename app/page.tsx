@@ -368,15 +368,3 @@ export default function HomePage() {
     </main>
   );
 }
-ct" variant="ghost" size="lg">Contact us</Button>
-          </div>
-          <p className="text-xl font-body text-ink-faded font-medium pt-8">
-            All communication is confidential and judgment-free.
-          </p>
-        </ScrollReveal>
-      </section>
-
-      <Footer />
-    </main>
-  );
-}
