@@ -70,13 +70,11 @@ export default function HomePage() {
             className="relative hidden lg:block h-[600px] animate-float-paper"
           >
             {/* Main Collage Piece */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-paper-lined border-2 border-ink shadow-sketch rounded-wobbly-4 p-8">
-              <Tape />
-              {/* Abstract doodle inside the big paper */}
-              <svg viewBox="0 0 200 200" className="w-full h-full stroke-ink-navy/20 fill-none" strokeWidth="2" strokeLinecap="round">
-                <path d="M20,20 Q100,50 180,20 T20,100 T180,180" />
-                <circle cx="100" cy="100" r="50" strokeDasharray="10,10" />
-              </svg>
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[80%] h-[80%] bg-white p-4 pb-12 border-2 border-ink shadow-sketch rounded-wobbly-4 rotate-[-1deg] group hover:rotate-0 transition-transform duration-500">
+              <Tape className="top-[-15px] left-1/2 -translate-x-1/2 w-32" />
+              <div className="w-full h-full overflow-hidden border border-ink/20 bg-paper-lined rounded-wobbly-1">
+                <img src="/pic/workshop_pics/workshop-3.jpg" alt="Workshop Highlight" className="w-full h-full object-cover transition-scale duration-700 group-hover:scale-105" />
+              </div>
             </div>
 
             {/* Floating sticky notes */}
@@ -206,17 +204,19 @@ export default function HomePage() {
           <div className="grid lg:grid-cols-[1fr_1fr] gap-16 lg:gap-24 items-center">
             <ScrollReveal direction="left" className="relative h-[500px]">
               {/* Photo placeholder collage */}
-              <div className="absolute top-10 left-10 w-64 h-64 bg-white p-4 pb-16 shadow-sticky rotate-[-5deg] border border-ink/10">
-                <Tape className="top-[-15px]" />
-                <div className="w-full h-full bg-paper-lined flex items-center justify-center border border-ink/20">
-                  <span className="font-accent text-3xl text-ink-faded">Workshop photo</span>
+              <div className="absolute top-10 left-10 w-64 h-auto bg-white p-3 pb-8 shadow-sticky rotate-[-5deg] border border-ink/10 group hover:rotate-0 transition-transform duration-500">
+                <Tape className="top-[-10px] left-1/2 -translate-x-1/2 w-20" />
+                <div className="aspect-square w-full overflow-hidden border border-ink/20 bg-paper-lined">
+                  <img src="/pic/workshop_pics/workshop-1.jpg" alt="Workshop photo" className="w-full h-full object-cover transition-scale duration-700 group-hover:scale-110" />
                 </div>
+                <p className="font-accent text-xl text-ink mt-3 text-center">Workshop photo</p>
               </div>
-              <div className="absolute bottom-10 right-10 w-72 h-56 bg-white p-4 pb-16 shadow-sticky rotate-[4deg] border border-ink/10 z-10">
-                <Tape className="top-[-15px]" />
-                <div className="w-full h-full bg-paper-lined flex items-center justify-center border border-ink/20">
-                  <span className="font-accent text-3xl text-ink-faded">Community</span>
+              <div className="absolute bottom-10 right-10 w-72 h-auto bg-white p-3 pb-8 shadow-sticky rotate-[4deg] border border-ink/10 z-10 group hover:rotate-0 transition-transform duration-500">
+                <Tape className="top-[-10px] left-1/2 -translate-x-1/2 w-20" />
+                <div className="aspect-[4/3] w-full overflow-hidden border border-ink/20 bg-paper-lined">
+                  <img src="/pic/workshop_pics/workshop-2.jpg" alt="Community" className="w-full h-full object-cover transition-scale duration-700 group-hover:scale-110" />
                 </div>
+                <p className="font-accent text-xl text-ink mt-3 text-center">Community</p>
               </div>
               
               {/* Scribbles between photos */}
