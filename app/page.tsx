@@ -13,7 +13,7 @@ import Button from '../components/ui/SketchButton';
 import ScrollReveal from '../components/ui/ScrollReveal';
 import WobblyCard from '../components/ui/WobblyCard';
 import Tape from '../components/ui/Tape';
-import { focusAreas, siteStats, testimonials, trustSignals, blogPosts } from '../lib/content';
+import { focusAreas, siteStats, testimonials, trustSignals, blogPosts, workshopImages } from '../lib/content';
 
 export default function HomePage() {
   return (
@@ -253,25 +253,34 @@ export default function HomePage() {
       </section>
 
       {/* 6. YOUTH VOICES - Notice board */}
-      <section className="bg-paper py-20 sm:py-24 lg:py-32">
+...
+      {/* WORKSHOP HIGHLIGHTS GALLERY */}
+      <section className="py-20 sm:py-24 lg:py-32 bg-graph-paper overflow-hidden">
         <div className="container space-y-16">
           <SectionHeading
-            eyebrow="Youth voices"
-            title="Real stories from our community."
-            description="Our impact isn't just numbers. It's the daily experiences of the young people and educators we work with."
+            eyebrow="Moments in action"
+            title="Workshop Highlights."
+            description="A glimpse into our recent sessions with schools and youth communities."
             center
-            highlightColor="pink"
+            highlightColor="yellow"
           />
           
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 pt-8">
-            {testimonials.map((item, idx) => {
-              const colors = ['yellow', 'pink', 'blue', 'green', 'yellow'] as const;
-              return (
-                <ScrollReveal key={idx} direction="up" delay={idx + 1} className="h-full">
-                  <TestimonialCard {...item} color={colors[idx % 5]} />
-                </ScrollReveal>
-              );
-            })}
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4 pt-8">
+            {workshopImages.map((image, idx) => (
+              <ScrollReveal key={idx} direction="up" delay={idx + 1}>
+                <div className="group relative bg-white p-3 pb-12 shadow-sticky rotate-[-2deg] hover:rotate-0 transition-transform duration-500 border border-ink/10 h-full">
+                  <Tape className="top-[-10px] left-1/2 -translate-x-1/2 w-20" />
+                  <div className="aspect-square w-full overflow-hidden border border-ink/20 bg-paper-lined">
+                    <img 
+                      src={image.url} 
+                      alt={image.caption} 
+                      className="w-full h-full object-cover transition-scale duration-700 group-hover:scale-110" 
+                    />
+                  </div>
+                  <p className="font-accent text-xl text-ink mt-4 text-center">{image.caption}</p>
+                </div>
+              </ScrollReveal>
+            ))}
           </div>
         </div>
       </section>
@@ -348,6 +357,18 @@ export default function HomePage() {
               Emergency help
             </Button>
             <Button href="/contact" variant="ghost" size="lg">Contact us</Button>
+          </div>
+          <p className="text-xl font-body text-ink-faded font-medium pt-8">
+            All communication is confidential and judgment-free.
+          </p>
+        </ScrollReveal>
+      </section>
+
+      <Footer />
+    </main>
+  );
+}
+ct" variant="ghost" size="lg">Contact us</Button>
           </div>
           <p className="text-xl font-body text-ink-faded font-medium pt-8">
             All communication is confidential and judgment-free.

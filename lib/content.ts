@@ -230,3 +230,22 @@ export const members = [
     image: '/pic/member_pics/12.jpg'
   }
 ];
+
+export const workshopImages = [
+  {
+    url: '/pic/workshop_pics/workshop-1.jpg',
+    caption: 'Interactive awareness session'
+  },
+  {
+    url: '/pic/workshop_pics/workshop-2.jpg',
+    caption: 'Youth engagement workshop'
+  },
+  {
+    url: '/pic/workshop_pics/workshop-3.jpg',
+    caption: 'Community learning circle'
+  },
+  {
+    url: '/pic/workshop_pics/workshop-4.jpg',
+    caption: 'Empowering students'
+  }
+];
