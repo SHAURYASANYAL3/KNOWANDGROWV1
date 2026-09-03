@@ -252,10 +252,10 @@ export const workshopImages = [
 
 export const albums = [
   {
-    slug: 'walter-primary-school',
-    title: 'Walter Primary School Workshop',
-    description: 'An interactive mental health and digital safety workshop with the bright students of Walter Primary School. We engaged in group activities, shared ideas, and built safe spaces for open discussion.',
-    coverImage: '/pic/AU-primary/walter-primary-workshop-1.jpeg',
+    slug: 'au-primary-school',
+    title: 'AU Primary School Workshop',
+    description: 'An interactive session with the students of AU Primary School focusing on mental health awareness and building a supportive community environment.',
+    coverImage: '/pic/AU-primary/au-primary-workshop-1.jpeg',
     folder: 'AU-primary',
     date: 'September 2026',
     captions: [
@@ -263,10 +263,6 @@ export const albums = [
       "Students gathering around",
       "Explaining the concepts",
       "Group activity time!",
-      "A fun interactive moment",
-      "Sharing ideas together",
-      "Listening to their thoughts",
-      "A curious student asking questions",
       "Team collaboration",
       "Discussing mental health",
       "Safe space discussions",
@@ -274,8 +270,21 @@ export const albums = [
       "Engaging the whole class",
       "Peer support in action",
       "Wrapping up the activity",
-      "A great day at Walter Primary!"
+      "A great day at AU Primary!"
+    ]
+  },
+  {
+    slug: 'walter-primary-school',
+    title: 'Walter Primary School Workshop',
+    description: 'A focused digital safety and relationship health workshop for the youth at Walter Primary School. We engaged in deep conversations and interactive activities.',
+    coverImage: '/pic/Walter_primary_school_workshop/walter-primary-workshop-5.jpeg',
+    folder: 'Walter_primary_school_workshop',
+    date: 'September 2026',
+    captions: [
+      "A fun interactive moment",
+      "Sharing ideas together",
+      "Listening to their thoughts",
+      "A curious student asking questions"
     ]
   }
-  // Future albums can be added here with their respective folders and metadata
 ];
