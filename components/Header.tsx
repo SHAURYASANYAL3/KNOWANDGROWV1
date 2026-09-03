@@ -11,6 +11,7 @@ const pages = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
   { label: 'Focus Areas', href: '/focus-areas' },
+  { label: 'Gallery', href: '/gallery' },
   { label: 'Volunteer', href: '/volunteer' },
   { label: 'Contact', href: '/contact' }
 ];

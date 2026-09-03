@@ -249,3 +249,22 @@ export const workshopImages = [
     caption: 'Empowering students'
   }
 ];
+
+export const walterPrimaryCaptions = [
+  "Setting up the room",
+  "Students gathering around",
+  "Explaining the concepts",
+  "Group activity time!",
+  "A fun interactive moment",
+  "Sharing ideas together",
+  "Listening to their thoughts",
+  "A curious student asking questions",
+  "Team collaboration",
+  "Discussing mental health",
+  "Safe space discussions",
+  "Happy faces during the session",
+  "Engaging the whole class",
+  "Peer support in action",
+  "Wrapping up the activity",
+  "A great day at Walter Primary!"
+];
