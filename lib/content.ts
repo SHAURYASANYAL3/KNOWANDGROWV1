@@ -255,8 +255,8 @@ export const albums = [
     slug: 'walter-primary-school',
     title: 'Walter Primary School Workshop',
     description: 'An interactive mental health and digital safety workshop with the bright students of Walter Primary School. We engaged in group activities, shared ideas, and built safe spaces for open discussion.',
-    coverImage: '/pic/Walter_primary_school_workshop/walter-primary-workshop-1.jpeg',
-    folder: 'Walter_primary_school_workshop',
+    coverImage: '/pic/AU-primary/walter-primary-workshop-1.jpeg',
+    folder: 'AU-primary',
     date: 'September 2026',
     captions: [
       "Setting up the room",
