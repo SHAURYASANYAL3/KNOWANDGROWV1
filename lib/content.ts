@@ -250,21 +250,32 @@ export const workshopImages = [
   }
 ];
 
-export const walterPrimaryCaptions = [
-  "Setting up the room",
-  "Students gathering around",
-  "Explaining the concepts",
-  "Group activity time!",
-  "A fun interactive moment",
-  "Sharing ideas together",
-  "Listening to their thoughts",
-  "A curious student asking questions",
-  "Team collaboration",
-  "Discussing mental health",
-  "Safe space discussions",
-  "Happy faces during the session",
-  "Engaging the whole class",
-  "Peer support in action",
-  "Wrapping up the activity",
-  "A great day at Walter Primary!"
+export const albums = [
+  {
+    slug: 'walter-primary-school',
+    title: 'Walter Primary School Workshop',
+    description: 'An interactive mental health and digital safety workshop with the bright students of Walter Primary School. We engaged in group activities, shared ideas, and built safe spaces for open discussion.',
+    coverImage: '/pic/Walter_primary_school_workshop/walter-primary-workshop-1.jpeg',
+    folder: 'Walter_primary_school_workshop',
+    date: 'September 2026',
+    captions: [
+      "Setting up the room",
+      "Students gathering around",
+      "Explaining the concepts",
+      "Group activity time!",
+      "A fun interactive moment",
+      "Sharing ideas together",
+      "Listening to their thoughts",
+      "A curious student asking questions",
+      "Team collaboration",
+      "Discussing mental health",
+      "Safe space discussions",
+      "Happy faces during the session",
+      "Engaging the whole class",
+      "Peer support in action",
+      "Wrapping up the activity",
+      "A great day at Walter Primary!"
+    ]
+  }
+  // Future albums can be added here with their respective folders and metadata
 ];

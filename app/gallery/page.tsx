@@ -1,34 +1,18 @@
-import fs from 'fs';
-import path from 'path';
+import Link from 'next/link';
+import Image from 'next/image';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 import SectionHeading from '../../components/SectionHeading';
 import ScrollReveal from '../../components/ui/ScrollReveal';
-import GalleryGrid from '../../components/GalleryGrid';
-import { walterPrimaryCaptions } from '../../lib/content';
+import WobblyCard from '../../components/ui/WobblyCard';
+import { albums } from '../../lib/content';
 
-export default function GalleryPage() {
-  const imagesDir = path.join(process.cwd(), 'public', 'pic', 'Walter_primary_school_workshop');
-  let imagesData: { url: string; caption: string }[] = [];
-  try {
-    const files = fs.readdirSync(imagesDir);
-    const sortedFiles = files
-      .filter(file => /\.(jpg|jpeg|png|gif|webp)$/i.test(file))
-      .sort((a, b) => {
-        // Extract numbers from "walter-primary-workshop-X.jpeg"
-        const numA = parseInt(a.replace(/\D/g, '')) || 0;
-        const numB = parseInt(b.replace(/\D/g, '')) || 0;
-        return numA - numB;
-      });
+export const metadata = {
+  title: 'Gallery | KNOW & GROW',
+  description: 'Explore photos and moments from our workshops, school visits, and community initiatives.'
+};
 
-    imagesData = sortedFiles.map((file, index) => ({
-      url: `/pic/Walter_primary_school_workshop/${file}`,
-      caption: walterPrimaryCaptions[index] || 'Walter Primary Workshop'
-    }));
-  } catch (error) {
-    console.error('Error reading gallery directory:', error);
-  }
-
+export default function GalleryDirectoryPage() {
   return (
     <main className="min-h-screen bg-paper text-ink overflow-hidden selection:bg-marker-yellow">
       <Header />
@@ -38,8 +22,8 @@ export default function GalleryPage() {
           <ScrollReveal direction="up" className="text-center">
             <SectionHeading 
               eyebrow="Gallery" 
-              title="Walter Primary School Workshop" 
-              description="A glimpse into our recent workshop and activities."
+              title="Our Moments & Memories" 
+              description="A visual journey of our workshops, school visits, and community initiatives."
               center 
               highlightColor="pink"
             />
@@ -48,7 +32,39 @@ export default function GalleryPage() {
       </section>
 
       <section className="container py-24 bg-paper">
-        <GalleryGrid images={imagesData} />
+        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-3">
+          {albums.map((album, index) => {
+            const rotations = ['rotate-1', '-rotate-1', 'rotate-2', '-rotate-2'];
+            const rotation = rotations[index % rotations.length];
+
+            return (
+              <ScrollReveal key={album.slug} direction="up" delay={(index % 4) + 1}>
+                <Link href={`/gallery/${album.slug}`} className="block group">
+                  <WobblyCard 
+                    variant="sticky-yellow" 
+                    tape 
+                    className={`h-full ${rotation} group-hover:rotate-0 transition-transform duration-300 group-hover:scale-105`}
+                  >
+                    <div className="relative aspect-video w-full bg-ink/5 border-2 border-dashed border-ink/20 rounded overflow-hidden mb-6">
+                      <Image
+                        src={album.coverImage}
+                        alt={`Cover photo for ${album.title}`}
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
+                    </div>
+                    <div className="space-y-3">
+                      <p className="font-accent text-xl text-ink-faded">{album.date}</p>
+                      <h3 className="font-heading text-3xl text-ink leading-tight">{album.title}</h3>
+                      <p className="font-body text-lg text-ink/80 line-clamp-3">{album.description}</p>
+                    </div>
+                  </WobblyCard>
+                </Link>
+              </ScrollReveal>
+            );
+          })}
+        </div>
       </section>
 
       <Footer />
