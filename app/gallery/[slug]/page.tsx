@@ -16,8 +16,9 @@ export function generateStaticParams() {
   }));
 }
 
-export function generateMetadata({ params }: { params: { slug: string } }) {
-  const album = albums.find(a => a.slug === params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const album = albums.find(a => a.slug === slug);
   if (!album) return { title: 'Not Found' };
   
   return {
@@ -26,8 +27,9 @@ export function generateMetadata({ params }: { params: { slug: string } }) {
   };
 }
 
-export default function AlbumPage({ params }: { params: { slug: string } }) {
-  const album = albums.find(a => a.slug === params.slug);
+export default async function AlbumPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const album = albums.find(a => a.slug === slug);
   
   if (!album) {
     notFound();
