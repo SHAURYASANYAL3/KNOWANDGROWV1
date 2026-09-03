@@ -71,6 +71,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <head>
         <meta name="google-site-verification" content="ssbXNjdvojRNdr60tvqoCJKpFcJYFafwPHL9Zso_Yyw" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "KNOW & GROW",
+              "url": "https://knowandgrow.vercel.app/"
+            })
+          }}
+        />
       </head>
       <body className={`${kalam.variable} ${patrickHand.variable} ${caveat.variable} font-body bg-paper text-ink relative`}>
         {/* Global ruled lines overlay - very subtle */}
