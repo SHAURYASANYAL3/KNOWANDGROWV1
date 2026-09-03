@@ -7,6 +7,8 @@ import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Button from './ui/SketchButton';
 
+import SearchModal from './SearchModal';
+
 const pages = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
@@ -75,6 +77,7 @@ export default function Header() {
             <Button href="/resources" variant="primary" size="sm" className="hidden lg:inline-flex">
               Resources
             </Button>
+            <SearchModal />
             <button
               type="button"
               className="inline-flex h-12 w-12 items-center justify-center rounded-wobbly-2 border-2 border-ink bg-white text-ink shadow-sketch lg:hidden transition hover:bg-paper"

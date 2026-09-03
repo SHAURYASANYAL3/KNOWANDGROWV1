@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://knowandgrow.vercel.app
+
+# Sitemaps
+Sitemap: https://knowandgrow.vercel.app/sitemap.xml

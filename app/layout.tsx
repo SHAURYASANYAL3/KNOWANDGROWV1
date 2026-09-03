@@ -64,6 +64,8 @@ export const metadata: Metadata = {
   }
 };
 
+import { Analytics } from '@vercel/analytics/react';
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
@@ -74,6 +76,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* Global ruled lines overlay - very subtle */}
         <div className="pointer-events-none fixed inset-0 z-[-1] bg-lined-paper opacity-50" />
         {children}
+        <Analytics />
       </body>
     </html>
   );
