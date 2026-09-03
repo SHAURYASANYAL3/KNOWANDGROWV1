@@ -23,12 +23,20 @@ const caveat = Caveat({
   display: 'swap'
 });
 
+export const viewport = {
+  themeColor: '#fff9f0',
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+};
+
 export const metadata: Metadata = {
   title: {
     default: 'KNOW & GROW | Youth Mental Health & Digital Safety Awareness',
     template: '%s | KNOW & GROW'
   },
   description: 'A youth-led initiative focused on mental health awareness, digital safety, drug prevention, and community education.',
+  manifest: '/manifest.json',
   keywords: [
     'youth mental health',
     'digital safety',

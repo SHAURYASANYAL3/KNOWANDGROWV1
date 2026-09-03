@@ -39,34 +39,34 @@ export default function ContactPage() {
           <ScrollReveal direction="up">
             <div className="bg-white border-2 border-ink rounded-wobbly-1 p-10 shadow-sketch">
               <h2 className="text-4xl font-heading text-ink mb-8 underline decoration-wavy decoration-ink-faded">Send a message</h2>
-              <form className="space-y-8">
+              <form action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST" className="space-y-8">
                 <div className="grid sm:grid-cols-2 gap-8">
                   <div className="space-y-2">
-                    <label className="block font-accent text-2xl text-ink">First Name</label>
-                    <input className="input-sketch" type="text" placeholder="Your name" />
+                    <label htmlFor="name" className="block font-accent text-2xl text-ink">First Name</label>
+                    <input id="name" name="name" className="input-sketch" type="text" placeholder="Your name" required />
                   </div>
                   <div className="space-y-2">
-                    <label className="block font-accent text-2xl text-ink">Email</label>
-                    <input className="input-sketch" type="email" placeholder="you@example.com" />
+                    <label htmlFor="email" className="block font-accent text-2xl text-ink">Email</label>
+                    <input id="email" name="email" className="input-sketch" type="email" placeholder="you@example.com" required />
                   </div>
                 </div>
                 
                 <div className="space-y-2">
-                  <label className="block font-accent text-2xl text-ink">Subject</label>
-                  <select className="input-sketch bg-white appearance-none cursor-pointer">
-                    <option>General inquiry</option>
-                    <option>Volunteering</option>
-                    <option>School partnership</option>
-                    <option>Program feedback</option>
+                  <label htmlFor="subject" className="block font-accent text-2xl text-ink">Subject</label>
+                  <select id="subject" name="subject" className="input-sketch bg-white appearance-none cursor-pointer">
+                    <option value="General inquiry">General inquiry</option>
+                    <option value="Volunteering">Volunteering</option>
+                    <option value="School partnership">School partnership</option>
+                    <option value="Program feedback">Program feedback</option>
                   </select>
                 </div>
                 
                 <div className="space-y-2">
-                  <label className="block font-accent text-2xl text-ink">Message</label>
-                  <textarea className="input-sketch resize-y min-h-[150px]" placeholder="How can we help? (Feel free to scribble)" />
+                  <label htmlFor="message" className="block font-accent text-2xl text-ink">Message</label>
+                  <textarea id="message" name="message" className="input-sketch resize-y min-h-[150px]" placeholder="How can we help? (Feel free to scribble)" required />
                 </div>
                 
-                <button type="button" className="btn-sketch highlight-yellow w-full justify-center">
+                <button type="submit" className="btn-sketch highlight-yellow w-full justify-center">
                   Send message
                 </button>
               </form>
